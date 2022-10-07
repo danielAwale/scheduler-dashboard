@@ -27,7 +27,13 @@ const data = [
 ];
 
 class Dashboard extends Component {
-  state = { loading: false, focused: null }
+  state = {
+    loading: false,
+    focused: null,
+    days: [],
+    appointments: {},
+    interviewers: {}
+  }
 
   componentDidMount() {
     const focused = JSON.parse(localStorage.getItem("focused"));
